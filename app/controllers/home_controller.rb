@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   def index
 
-    text = "I love skiing."
+    text = "poop is smelly"
 
     text_analyzer = TextAnalyzer.new(text).show_sentiment
 

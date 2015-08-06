@@ -9,7 +9,11 @@ class TextAnalyzer
 
   def show_sentiment
     response = @alchemyapi.sentiment("text", @text)
+    if response["docSentiment"] = []
+      "No Sentiment"
+    else
     "Sentiment: " + response["docSentiment"]["type"]
+    end
   end
 end
 
