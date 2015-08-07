@@ -1,19 +1,12 @@
-require './alchemyapi_ruby/alchemyapi'
-
 class TextAnalyzer
 
-  def initialize(text)
-    @alchemyapi = AlchemyAPI.new()
-    @text = text
+  def initialize
+    AlchemyAPI.key = ENV["ALCHEMY_API_KEY"]
   end
 
   def show_sentiment
-    response = @alchemyapi.sentiment("text", @text)
-    if response["docSentiment"] = []
-      "No Sentiment"
-    else
-    "Sentiment: " + response["docSentiment"]["type"]
-    end
+    results = AlchemyAPI::SentimentAnalysis.new.search(url: 'http://www.alchemyapi.com/')
+    results
   end
 end
 

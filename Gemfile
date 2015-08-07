@@ -10,6 +10,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'rails_12factor', group: :production
+gem "json"
+
 
 
 group :development, :test do
@@ -19,6 +21,8 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'database_cleaner'
   gem 'launchy'
+  gem 'dotenv-rails'
 end
 
 gem "rspec-rails", :group => [:development, :test]
+gem 'alchemy-api-rb', :require => 'alchemy_api'
