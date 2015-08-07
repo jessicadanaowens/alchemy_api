@@ -1,8 +1,8 @@
 class HomeController < ApplicationController
 
   def index
-    text_analysis = TextAnalyzer.new.get_text_sentiment("text", "I hate skiing!")["docSentiment"]
+    # text_analysis = TextAnalyzer.new.get_text_sentiment("text", "I hate skiing!")["docSentiment"]
 
-    @sentiment = text_analysis
+    @sentiment = TextAnalyzer.new.sentiment_targeted("text", "I hate the outdoors! Skiing is the worst outdoor sport.", "skiing")
   end
 end
