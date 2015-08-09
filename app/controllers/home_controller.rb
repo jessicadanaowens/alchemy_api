@@ -1,8 +1,12 @@
 class HomeController < ApplicationController
 
   def index
-    # text_analysis = TextAnalyzer.new.get_text_sentiment("text", "I hate skiing!")["docSentiment"]
+    tweets_to_alchemy_api = TwitterHelper.new.tweets_to_alchemy_api
+    tweets_tagged_alchemy_api = TwitterHelper.new.tweets_tagged_alchemy_api
 
-    @sentiment = TextAnalyzer.new.sentiment_targeted("text", "I hate the outdoors! Skiing is the worst outdoor sport.", "skiing")
+    @results = {}
+    @results[:tweets_to_alchemy_api] = TweetAnalyzer.new(tweets_to_alchemy_api).results
+    @results[:tweets_tagged_alchemy_api] = TweetAnalyzer.new(tweets_tagged_alchemy_api).results
   end
 end
+

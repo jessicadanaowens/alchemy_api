@@ -1,1 +1,8 @@
-<h1><%= @sentiment %></h1>
+<h1> Alchemy API Analyer</h1>
+<h3>How do twitter users feel about Alchemy API in the past week?</h3>
+<ul>
+  <li>Tweets to @alchemyapi: <%=@results[:tweets_to_alchemy_api][:positive]%>,  <%=@results[:tweets_to_alchemy_api][:negative]%>,  <%=@results[:tweets_to_alchemy_api][:neutral]%></li>
+  <li>Tweets tagged #alchemyapi: <%=@results[:tweets_tagged_alchemy_api][:positive]%>, <%=@results[:tweets_tagged_alchemy_api][:negative]%>, <%=@results[:tweets_tagged_alchemy_api][:neutral] %></li>
+</ul>
+
+<h1><%= @tweets_tagged_alchemy_api%></h1>

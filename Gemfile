@@ -11,10 +11,11 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'rails_12factor', group: :production
 gem "json"
-
+gem 'twitter', '~> 5.14.0'
 
 
 group :development, :test do
+  gem 'pry-byebug', '~> 2.0.0'
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'capybara'
@@ -26,3 +27,4 @@ end
 
 gem "rspec-rails", :group => [:development, :test]
 gem 'alchemy-api-rb', :require => 'alchemy_api'
+gem 'faraday', '~> 0.9.1'
