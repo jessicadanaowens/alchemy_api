@@ -11,7 +11,7 @@ class Analyzer
 
   def results
     analyze_items
-    {positive: percent(@positive) + " positive", negative: percent(@negative) + " negative", neutral: percent(@neutral) + " neutral"}
+    {total: @total, positive: percent(@positive) + " positive", negative: percent(@negative) + " negative", neutral: percent(@neutral) + " neutral"}
   end
 
   def analyze_items

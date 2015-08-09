@@ -5,7 +5,7 @@ describe "home" do
 
   visit '/'
 
-  expect(page).to have_content "hello"
+  expect(page).to have_content "Alchemy API Analyzer"
   end
 
 end

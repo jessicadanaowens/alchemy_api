@@ -14,6 +14,7 @@ class TwitterSentimentsController < ApplicationController
 
     @results[:twitter][:tweets_to_alchemy_api] = Analyzer.new("text", tweets_to_alchemy_api).results
     @results[:twitter][:tweets_tagged_alchemy_api] = Analyzer.new("text", tweets_tagged_alchemy_api).results
+    @results[:twitter][:total] = Analyzer.new("text", tweets_tagged_alchemy_api).results["total"]
 
     render json: @results
   end
