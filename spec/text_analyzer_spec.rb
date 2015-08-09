@@ -3,21 +3,21 @@ require "rails_helper"
 describe "TextAnalzer" do
   it "indicates when the text is positive" do
     text = "I love skiing."
-    sentiment = TextAnalyzer.new(text).show_sentiment
+    sentiment = AlchemyapiTextAnalyzer.new(text).show_sentiment
 
     expect(sentiment).to eq "Sentiment: positive"
     end
 
   it "indicates when the text is negative" do
     text = "I hate skiing."
-    sentiment = TextAnalyzer.new(text).show_sentiment
+    sentiment = AlchemyapiTextAnalyzer.new(text).show_sentiment
 
     expect(sentiment).to eq "Sentiment: negative"
   end
 
   it "indicates when the text is neutral" do
     text = "I want to climb Mount Everest one day."
-    sentiment = TextAnalyzer.new(text).show_sentiment
+    sentiment = AlchemyapiTextAnalyzer.new(text).show_sentiment
 
     expect(sentiment).to eq "Sentiment: neutral"
   end
