@@ -1,8 +1,24 @@
-<h1> Alchemy API Analyer</h1>
-<h3>How do twitter users feel about Alchemy API in the past week?</h3>
-<ul>
-  <li>Tweets to @alchemyapi: <%=@results[:tweets_to_alchemy_api][:positive]%>,  <%=@results[:tweets_to_alchemy_api][:negative]%>,  <%=@results[:tweets_to_alchemy_api][:neutral]%></li>
-  <li>Tweets tagged #alchemyapi: <%=@results[:tweets_tagged_alchemy_api][:positive]%>, <%=@results[:tweets_tagged_alchemy_api][:negative]%>, <%=@results[:tweets_tagged_alchemy_api][:neutral] %></li>
-</ul>
+<h1> Alchemy API Analyzer</h1>
 
-<h1><%= @tweets_tagged_alchemy_api%></h1>
+<h3>How do twitter users feel about Alchemy API in the past week?</h3>
+    <ul>
+      <li>Tweets to @alchemyapi reveal:
+        <%=@results[:twitter][:tweets_to_alchemy_api][:positive]%>,
+        <%=@results[:twitter][:tweets_to_alchemy_api][:negative]%>,
+        <%=@results[:twitter][:tweets_to_alchemy_api][:neutral]%>
+      </li>
+      <li>Tweets tagged #alchemyapi reveal:
+        <%=@results[:twitter][:tweets_tagged_alchemy_api][:positive]%>,
+        <%=@results[:twitter][:tweets_tagged_alchemy_api][:negative]%>,
+        <%=@results[:twitter][:tweets_tagged_alchemy_api][:neutral]%>
+      </li>
+    </ul>
+
+<h3>How do user feel about Alchemy API on Stack Overflow right now?</h3>
+    <ul>
+      <li>Questions tagged #alchemy api and associated answers and comments reveal:
+        <%= @results[:stackoverflow][:tagged_alchemyapi][:positive]%>,
+        <%= @results[:stackoverflow][:tagged_alchemyapi][:negative]%>,
+        <%= @results[:stackoverflow][:tagged_alchemyapi][:neutral]%>
+      </li>
+    </ul>

@@ -3,7 +3,7 @@ require 'net/http'
 require 'uri'
 require 'json'
 
-class TextAnalyzer
+class AlchemyapiTextAnalyzer
 
   @@ENDPOINTS = {}
   @@ENDPOINTS['sentiment'] = {}
