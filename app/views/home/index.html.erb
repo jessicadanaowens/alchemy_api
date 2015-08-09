@@ -1,24 +1,19 @@
-<h1> Alchemy API Analyzer</h1>
+<div ng-app="alchemyAPI" ng-controller="analyzerCtrl">
 
-<h3>How do Twitter users feel about Alchemy API in the past week?</h3>
-    <ul>
-      <li>Tweets to @alchemyapi reveal:
-        <%=@results[:twitter][:tweets_to_alchemy_api][:positive]%>,
-        <%=@results[:twitter][:tweets_to_alchemy_api][:negative]%>,
-        <%=@results[:twitter][:tweets_to_alchemy_api][:neutral]%>
-      </li>
-      <li>Tweets tagged #alchemyapi reveal:
-        <%=@results[:twitter][:tweets_tagged_alchemy_api][:positive]%>,
-        <%=@results[:twitter][:tweets_tagged_alchemy_api][:negative]%>,
-        <%=@results[:twitter][:tweets_tagged_alchemy_api][:neutral]%>
-      </li>
-    </ul>
+    <h1> Alchemy API Analyzer</h1>
 
-<h3>How do Stack Overflow users feel about Alchemy API right now?</h3>
-    <ul>
-      <li>Questions tagged #alchemy api and associated answers and comments reveal:
-        <%= @results[:stackoverflow][:tagged_alchemyapi][:positive]%>,
-        <%= @results[:stackoverflow][:tagged_alchemyapi][:negative]%>,
-        <%= @results[:stackoverflow][:tagged_alchemyapi][:neutral]%>
-      </li>
-    </ul>
+    <button ng-click="showTwitterSentiments()">How do Twitter users feel about Alchemy API in the past week?</button>
+
+    <div id="twitter-thinking"></div>
+    <div id="twitter-results"></div>
+
+    <button ng-click="showStackOverflowSentiments()">How do Stackoverflow users feel about Alchemy API currently?</button>
+
+    <div id="stackoverflow-thinking"></div>
+    <div id="stackoverflow-results"></div>
+
+</div>
+
+
+
+

@@ -28,3 +28,6 @@ end
 gem "rspec-rails", :group => [:development, :test]
 gem 'alchemy-api-rb', :require => 'alchemy_api'
 gem 'faraday', '~> 0.9.1'
+gem 'angularjs-rails', '~>1.3.9'
+gem 'responders', '~> 2.1.0'
+
