@@ -1,3 +1,13 @@
 == README
 
 https://evening-woodland-3154.herokuapp.com/
+
+Public API Endpoints:
+
+How do Twitter users feel about Alchemy API in the past week?
+
+   - get "/twitter_sentiments"
+
+How do Stackoverflow users feel about Alchemy API currently?
+
+   - get "/stackoverflow_sentiments"
